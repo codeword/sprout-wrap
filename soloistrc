@@ -47,6 +47,23 @@ recipes:
 
 - sprout-osx-apps::rubymine
 
+- pivotal_workstation::default_editor
+- sprout-osx-apps::flycut
+- sprout-osx-settings::function_keys
+- pivotal_workstation::github_ssh_keys
+- pivotal_workstation::input_on_login
+- pivotal_workstation::keyboard_preferences
+- pivotal_workstation::libreoffice
+- pivotal_workstation::menubar_preferences
+- pivotal_workstation::osx_updates
+- pivotal_workstation::pivotal_logos
+- pivotal_workstation::rename_machine
+- pivotal_workstation::screen_sharing_on
+- pivotal_workstation::set_screensaver_preferences
+- pivotal_workstation::snmpd
+- pivotal_workstation::tcp_keepalive
+- pivotal_workstation::timemachine_preferences
+
 - sprout-homebrew
 - sprout-osx-rubymine::preferences
 

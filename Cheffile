@@ -1,6 +1,3 @@
-cookbook 'meta',
-  :path => 'site-cookbooks/meta'
-
 cookbook 'sprout-osx-rbenv',
   :git => 'git://github.com/pivotal-sprout/sprout.git',
   :path => 'sprout-osx-rbenv'
