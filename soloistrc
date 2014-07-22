@@ -35,6 +35,8 @@ recipes:
 node_attributes:
   sprout:
     git:
+      aliases:
+        - ci 'pair-commit -v'
       domain: pivotallabs.com
       authors:
         - initials: jrhb
@@ -45,7 +47,7 @@ node_attributes:
       projects:
         -
           name: sprout-wrap
-          url: git@github.com/codeword/sprout-wrap.git
+          url: git@github.com:codeword/sprout-wrap.git
     terminal:
       default_profile: 'Pro'
     settings:
