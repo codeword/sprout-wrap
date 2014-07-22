@@ -48,6 +48,8 @@ node_attributes:
         -
           name: sprout-wrap
           url: git@github.com:codeword/sprout-wrap.git
+          post_clone_commands:
+            - 'git checkout vdp'
     terminal:
       default_profile: 'Pro'
     settings:
