@@ -23,17 +23,12 @@ recipes:
 # development (rails)
 - sprout-rbenv
 - sprout-ruby
-- sprout-mysql
-- sprout-postgresql
 
 # apps
-- sprout-osx-apps::iterm2
 - sprout-osx-apps::flycut
 - sprout-osx-apps::shiftit
 
 # apps (editors)
-- sprout-osx-apps::textmate_bundles
-- sprout-osx-apps::textmate_preferences
 - sprout-osx-apps::macvim
 - sprout-rubymine
 
@@ -42,21 +37,15 @@ node_attributes:
     git:
       domain: pivotallabs.com
       authors:
-        - initials: ah
-          name: Abhijit Hiremagalur
-          username: abhi
-        - initials: bc
-          name: Brian Cunnie
-          username: cunnie
         - initials: jrhb
           name: Jonathan Barnes
-        - initials: lw
-          name: Luke Winikates
-          username: lwinikates
+        - initials: jg
+          name: Jagadeesh Gajula
+          email: jgajula@visa.com
       projects:
         -
           name: sprout-wrap
-          url: https://github.com/pivotal-sprout/sprout-wrap.git
+          url: git@github.com/codeword/sprout-wrap.git
     terminal:
       default_profile: 'Pro'
     settings:
@@ -69,13 +58,6 @@ node_attributes:
       magnification': false
     homebrew:
       formulae:
-        - ctags-exuberant
-        - ag
-        - chromedriver
-        - imagemagick
-        - node
-        - pstree
-        - qt
         - ssh-copy-id
         - tmux
         - tree
@@ -86,14 +68,9 @@ node_attributes:
       casks:
         - ccmenu
         - firefox
-        - gitx-rowanj
         - github
         - google-chrome
-        - google-drive
-        - google-hangouts
         - skype
+        - sourcetree
         - textmate
-        - vagrant
-        - virtualbox
-        - xquartz
         - xscope
