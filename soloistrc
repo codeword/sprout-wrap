@@ -37,13 +37,18 @@ node_attributes:
     git:
       aliases:
         - ci 'commit -v'
-      domain: pivotallabs.com
+      domain: visa.com
       authors:
-        - initials: jrhb
-          name: Jonathan Barnes
+        - initials: al
+          name: Aaron Levine
+          username: alevine
         - initials: jg
           name: Jagadeesh Gajula
+          username: jgajula
           email: jgajula@visa.com
+        - initials: jrhb
+          name: Jonathan Barnes
+          username: jbarnes
       projects:
         -
           name: sprout-wrap
@@ -71,9 +76,11 @@ node_attributes:
         - rbenv-gem-rehash
       casks:
         - ccmenu
+        - dropbox
         - firefox
         - github
         - google-chrome
+        - iterm2
         - skype
         - sourcetree
         - textmate
