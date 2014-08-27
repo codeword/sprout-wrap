@@ -80,7 +80,9 @@ node_attributes:
         - firefox
         - github
         - google-chrome
+        - intellij-idea
         - iterm2
+        - screenhero
         - skype
         - sourcetree
         - textmate
