@@ -46,7 +46,8 @@ node_attributes:
     rbenv:
       rubies:
         2.0.0-p353: {}
-      default_ruby: 2.0.0-p353
+        2.1.2: {}
+      default_ruby: 2.1.2
     settings:
       clock_format: EEE MMM d  h:mm:ss a
     dock_preferences:
@@ -58,22 +59,25 @@ node_attributes:
     homebrew:
       formulae:
         - ack
-        - ctags-exuberant
+        - chromedriver
         - pstree
+        - rbenv-binstubs
+        - rbenv-gem-rehash
         - ssh-copy-id
         - tmux
         - tree
         - watch
         - wget
-        - chromedriver
-        - rbenv-binstubs
-        - rbenv-gem-rehash
       casks:
-        - ccmenu
-        - firefox
         - appcode
+        - bittorrent-sync
+        - firefox
         - google-chrome
         - google-drive
-        - sorcetree
+        - handbrake
+        - intellij-idea-ce
+        - minecraft
+        - plex-media-server
         - skype
+        - sorcetree
         - xscope
