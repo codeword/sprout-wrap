@@ -1,81 +1,113 @@
+cookbook_paths:
+- .librarian/chef/cookbooks
+
 recipes:
-
-# base (required by sprout)
 - sprout-base
-- sprout-base::bash_it
 - sprout-base::homebrew
+- sprout-base::bash_it
+- sprout-base::workspace_directory
+- sprout-homebrew
 
-# settings
 - sprout-osx-settings
 - sprout-osx-settings::dock_preferences
+
 - sprout-terminal
 - sprout-terminal::update_font
-- sprout-ssh::known_hosts_github
 
-# development (general)
-- sprout-base::workspace_directory
-- sprout-git::config
-- sprout-git::git_projects
-- sprout-git::git_scripts
+- sprout-git
+- sprout-git::authors
+- sprout-git::projects
 
-# development (rails)
-- sprout-rbenv
 - sprout-ruby
+- sprout-rbenv
+
+- sprout-jetbrains-editors::intellij-ce
+- cf-vim
 
 # apps
 - sprout-osx-apps::flycut
+- sprout-osx-apps::iterm2
+- sprout-osx-apps::remote_desktop
 - sprout-osx-apps::shiftit
-- sprout-osx-apps::menumeters
 
-# apps (editors)
-- sprout-rubymine
-- sprout-homebrew
 
 node_attributes:
-  git_pairs_domain: codeword.net
-  git_pairs_authors:
-    - initials: jrhb
-      name: Jonathan Barnes
+  versions:
+    bash_it: HEAD
+
+  bash_it:
+    enabled_plugins:
+      aliases:
+        - general
+        - bundler
+      completion:
+        - defaults
+        - git
+        - ssh
+      plugins:
+        - ssh
+    custom_plugins:
+      cf-bosh:
+        - bash_it/custom/bo.bash
+#      cf-common:
+#        - bash_it/custom/vim_as_default_editor.bash
+#        - bash_it/custom/brew-cask.bash
+#        - bash_it/custom/common-aliases.bash
+#        - bash_it/custom/dirty-repos.bash
+#        - bash_it/custom/goto.bash
+#        - bash_it/custom/pullify.bash
+#        - bash_it/custom/purge-system-gems.bash
+
   git_projects:
     -
       - sprout-wrap
       - https://github.com/codeword/sprout-wrap.git
+
+  rbenv:
+    default_ruby: "2.1.2"
+    rubies:
+      1.9.3: {}
+      2.1.5: {}
+
   sprout:
     terminal:
       default_profile: 'Pro'
-    rbenv:
-      rubies:
-        2.0.0-p353: {}
-        2.1.2: {}
-      default_ruby: 2.1.2
-    settings:
-      clock_format: EEE MMM d  h:mm:ss a
+
+    git:
+      aliases:
+        - 'ci "duet-commit -v"'
+
+      domain: codeword.net
+      authors:
+        - initials: jrhb
+          name:     Jonathan Barnes
+
     dock_preferences:
       orientation: 'left'
       auto_hide: true
       clear_apps: true
       tile_size: 35
       magnification: false
+
     homebrew:
       formulae:
         - ack
-        - chromedriver
+        - libxml2 # Used by Nokogiri
         - pstree
         - rbenv-binstubs
         - rbenv-gem-rehash
-        - ssh-copy-id
+        - tig
         - tmux
         - tree
         - watch
         - wget
       casks:
-        - appcode
         - bittorrent-sync
         - firefox
         - google-chrome
         - google-drive
         - handbrake
-        - intellij-idea-ce
+        - java
         - minecraft
         - plex-media-server
         - skype

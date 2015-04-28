@@ -1,77 +1,86 @@
 SITE
-  remote: http://community.opscode.com/api/v1
+  remote: https://supermarket.getchef.com/api/v1
   specs:
-    dmg (2.2.0)
-    homebrew (1.5.4)
+    build-essential (2.2.3)
+    dmg (2.2.2)
+    homebrew (1.12.0)
+      build-essential (>= 2.1.2)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout
-  path: osx
+  remote: git@github.com:pivotal-cf/sprout-wrap.git
+  path: cf-vim
   ref: master
-  sha: 35a8fa518adda87a90725f83aedecf8d874fd241
+  sha: 4b05a3c540cc443aae07bef9952b6b5b7c51107d
+  specs:
+    cf-vim (0.1.0)
+      homebrew (>= 0.0.0)
+      sprout-base (>= 0.0.0)
+      sprout-homebrew (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/osx.git
+  ref: master
+  sha: 70ef029c8b25dbab5be2fb328b987297c05936db
   specs:
     osx (0.1.0)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout
-  path: sprout-osx-apps
+  remote: https://github.com/pivotal-sprout/sprout-base.git
   ref: master
-  sha: 35a8fa518adda87a90725f83aedecf8d874fd241
-  specs:
-    sprout-osx-apps (0.1.0)
-      dmg (>= 0.0.0)
-      homebrew (>= 0.0.0)
-      sprout-base (>= 0.0.0)
-      sprout-osx-settings (>= 0.0.0)
-
-GIT
-  remote: https://github.com/pivotal-sprout/sprout
-  path: sprout-pivotal
-  ref: master
-  sha: 35a8fa518adda87a90725f83aedecf8d874fd241
-  specs:
-    sprout-pivotal (0.1.0)
-      dmg (>= 0.0.0)
-      homebrew (>= 0.0.0)
-      sprout-base (>= 0.0.0)
-
-GIT
-  remote: https://github.com/pivotal-sprout/sprout-base
-  ref: master
-  sha: e2649562c9ca53944d80380b1d95beb9c61df60e
+  sha: 9584e55ecc51c9938071eafc2065a530a766fa82
   specs:
     sprout-base (0.1.0)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout-git
+  remote: https://github.com/pivotal-sprout/sprout-git.git
   ref: master
-  sha: 6bb0e06fa3951cd29fd8c8b499c787771c61546c
+  sha: 06d7b052308f9b9b736e99fb444430ea4d9beb66
   specs:
     sprout-git (0.1.0)
       homebrew (>= 0.0.0)
       sprout-base (>= 0.0.0)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout-homebrew
+  remote: https://github.com/pivotal-sprout/sprout-homebrew.git
   ref: master
-  sha: 4541f754bd55f8b830edee524b3c98efc3760314
+  sha: 67a6a6ba55d9d8e933645ae7fd1331b85b05d1d0
   specs:
     sprout-homebrew (0.1.0)
-      homebrew (~> 1.5.4)
+      homebrew (>= 1.5.4)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout-mysql
+  remote: https://github.com/pivotal-sprout/sprout-jetbrains-editors.git
   ref: master
-  sha: ab0136970039502acfd8855eeceae426f0073127
+  sha: c7f1ef6d25e1ba0ee16f59d1a6aa45d221890fe2
+  specs:
+    sprout-jetbrains-editors (0.1.0)
+      sprout-base (>= 0.0.0)
+      sprout-homebrew (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-mysql.git
+  ref: master
+  sha: 7501fffff8a5c6e9237b295ab586595eeb2bb06e
   specs:
     sprout-mysql (0.1.0)
       homebrew (>= 0.0.0)
       sprout-base (>= 0.0.0)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout-osx-settings
+  remote: https://github.com/pivotal-sprout/sprout-osx-apps.git
   ref: master
-  sha: e281317036dbaf11c067ee327d413f4b6b0b6b23
+  sha: ba546bbae0450d58025e42bdff83f546a2689075
+  specs:
+    sprout-osx-apps (0.1.0)
+      dmg (>= 0.0.0)
+      homebrew (>= 1.6.6)
+      sprout-base (>= 0.0.0)
+      sprout-osx-settings (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-osx-settings.git
+  ref: master
+  sha: fa7f68da19bbb9cc45da22020d9043fcfc7ee73e
   specs:
     sprout-osx-settings (0.1.0)
       homebrew (>= 0.0.0)
@@ -79,77 +88,84 @@ GIT
       sprout-base (>= 0.0.0)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout-postgresql
+  remote: https://github.com/pivotal-sprout/sprout-postgresql.git
   ref: master
-  sha: 9abc130c573fd41bb51ec7959fc89678b2c8da46
+  sha: 4dda423c52414507123d084d3acee07f36d7ae94
   specs:
     sprout-postgresql (0.1.0)
-      homebrew (~> 1.5.4)
+      homebrew (>= 1.5.4)
       sprout-base (>= 0.0.0)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout-rbenv
+  remote: https://github.com/pivotal-sprout/sprout-rbenv.git
   ref: master
-  sha: 1e2e99e9642762c9c5e7e99a0fecabeba655c8ef
+  sha: 7436b84ac159c026961c66b7f96387755f554617
   specs:
     sprout-rbenv (0.1.0)
       homebrew (>= 0.0.0)
       sprout-base (>= 0.0.0)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout-ruby
+  remote: https://github.com/pivotal-sprout/sprout-redis.git
   ref: master
-  sha: dfc96330f8dee89f96c0f2e14dce87c7e03a2359
+  sha: b2c856a6558a78941b20be52593cb353def14424
+  specs:
+    sprout-redis (0.1.0)
+      homebrew (>= 0.0.0)
+      sprout-base (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-ruby.git
+  ref: master
+  sha: d6430744f515a2acce32580c03ba27e1fe0dea2e
   specs:
     sprout-ruby (0.1.0)
       sprout-base (>= 0.0.0)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout-rubymine
+  remote: https://github.com/pivotal-sprout/sprout-rubymine.git
   ref: master
-  sha: 4db34901eb9358a80bfc05e3c9d9baf8525a0b40
+  sha: 17ba0c71929dc7602ed12d0e77b136a19f8f36d1
   specs:
     sprout-rubymine (0.1.0)
       sprout-base (>= 0.0.0)
       sprout-homebrew (>= 0.0.0)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout-ssh
+  remote: https://github.com/pivotal-sprout/sprout-terminal.git
   ref: master
-  sha: 157fffbc948ceecb1ae7caa5ff3732137a628589
+  sha: b876a708f173d8fed4e1ce7ac0aa87cefc20a1a0
   specs:
-    sprout-ssh (0.1.0)
+    sprout-terminal (0.1.0)
+      osx (>= 0.0.0)
       sprout-base (>= 0.0.0)
-      sprout-osx-settings (>= 0.0.0)
 
 GIT
-  remote: https://github.com/pivotal-sprout/sprout-terminal
+  remote: https://github.com/pivotal-sprout/sprout-vim.git
   ref: master
-  sha: 816fd4b61bd37c84ad228968194d5bce93709759
+  sha: 8e6133a33f62abc9f1e5232bee446b74e45c4753
   specs:
-    sprout-terminal (0.2.0)
-      osx (>= 0.0.0)
-
-PATH
-  remote: site-cookbooks/meta
-  specs:
-    meta (0.1.1)
-      sprout-pivotal (>= 0.0.0)
+    sprout-vim (0.1.0)
+      homebrew (>= 0.0.0)
+      sprout-base (>= 0.0.0)
+      sprout-osx-apps (>= 0.0.0)
 
 DEPENDENCIES
-  meta (>= 0)
+  cf-vim (>= 0)
+  dmg (>= 0)
   osx (>= 0)
   sprout-base (>= 0)
   sprout-git (>= 0)
   sprout-homebrew (>= 0)
+  sprout-jetbrains-editors (>= 0)
   sprout-mysql (>= 0)
   sprout-osx-apps (>= 0)
   sprout-osx-settings (>= 0)
-  sprout-pivotal (>= 0)
   sprout-postgresql (>= 0)
   sprout-rbenv (>= 0)
+  sprout-redis (>= 0)
   sprout-ruby (>= 0)
   sprout-rubymine (>= 0)
-  sprout-ssh (>= 0)
   sprout-terminal (>= 0)
+  sprout-vim (>= 0)
 
