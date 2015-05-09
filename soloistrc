@@ -21,7 +21,7 @@ recipes:
 - sprout-ruby
 - sprout-rbenv
 
-- sprout-jetbrains-editors::intellij-ce
+- sprout-jetbrains-editors::intellij_ce
 - cf-vim
 
 # apps
@@ -47,8 +47,6 @@ node_attributes:
       plugins:
         - ssh
     custom_plugins:
-      cf-bosh:
-        - bash_it/custom/bo.bash
 #      cf-common:
 #        - bash_it/custom/vim_as_default_editor.bash
 #        - bash_it/custom/brew-cask.bash
